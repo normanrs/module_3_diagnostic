@@ -20,7 +20,7 @@ feature "User can visit root page" do
 
   it "and click on locate to be taken to a search page" do
     visit "/"
-    fill_in('Search', :with => 80203)
+    fill_in('q', :with => 80203)
     click_on "Locate"
 
     expect(current_path).to eq(search_path)
